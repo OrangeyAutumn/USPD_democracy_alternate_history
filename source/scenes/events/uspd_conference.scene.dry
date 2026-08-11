@@ -1,0 +1,32 @@
+title: USPD Party Conference
+subtitle: The USPD chooses their new central committee - will the Wittorf Affair have an influence on their choice?
+new-page: true
+view-if: uspd_relation >= 50 and wittorf_soviet_union = 1 and year = 1929 and month >= 6 and month <= 8
+max-visits: 1
+on-arrival: uspd_party_conference_seen = 1
+tags: event
+
+= USPD Party Conference
+
+Now is the USPD's national party conference, where they will choose their new leadership. The shadow of the Wittorf Affair hangs over it. On one hand are the hardline supporters of Liebknecht, who support a "social fascist" policy that places the SPD as equivalent to the Nazis. On the other hand is the "Conciliator" faction, who support a more cooperative policy towards the SPD.
+
+After our discussion with the Soviets, we are inclined to believe that Stalin is at least open to the Luxemburgists. In order to affect the USPD's leadership elections, we have to influence both the Comintern leaders as as well as the USPD membership.
+
+- @conciliator_success
+- @conciliator_fail
+
+
+@conciliator_success
+title: The Luxemburgists are the new leadership of the USPD.
+choose-if: (levi_advisor or rosenfeld_advisor) and (left_strength >= reformist_strength) and (uspd_relation >= 50) 
+unavailable-subtitle: [?  if not levi_advisor and not rosenfeld_advisor: Our party leadership is not left-wing enough. ?] [? if left_strength < reformist_strength: The Comintern doubts our commitment to socialism. ?]
+on-arrival: uspd_party_leader = "Luxemburgists"; communist_coalition += 3; uspd_relation += 10*(1-dissent); left_strength += 5; left_dissent -= 8
+achievement: versohnler
+
+With our support, the Luxemburgists have won the leadership contest! The new leadership is a group of Luxemburgists, including Arthur Ewert, Hugo Eberlein, and Ernst Meyer. Liebknecht remains, but largely as a figurehead only, it seems. We hope that the new leadership will be more inclined towards cooperation.
+
+
+@conciliator_fail
+title: Liebknecht retains his leadership position.
+
+Unfortunately, we could not influence the USPD leadership election against the hardliners. Liebknecht quickly moves to consolidate absolute leadership, expelling or exiling his opponents.
