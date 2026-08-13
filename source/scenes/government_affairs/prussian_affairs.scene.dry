@@ -18,7 +18,7 @@ We can enact policies in Prussia.
 - @bureaucracy: Purge the bureaucracy of reactionary elements.
 - @ban_sa: Ban the SA, the Nazi paramilitary group.
 - @unban_sa: Reverse the SA ban.
-- @ban_rfb: Ban the RFB, the Communist paramilitary.
+- @ban_rfb: Ban the RFB, the Spartacist paramilitary.
 - @unban_rfb: Reverse the RFB ban.
 - @ban_sh: Ban the Stahlhelm, the Nationalist paramilitary.
 - @unban_sh: Reverse the Stahlhelm ban.
@@ -73,16 +73,16 @@ The Stahlhelm is no longer banned.
 
 
 @ban_rfb
-view-if: communist_coalition < 3 and rfb_banned = 0
-on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1
+view-if: spartacist_coalition < 3 and rfb_banned = 0
+on-arrival: uspd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; spartacist_coalition -= 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1
 
-The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The Communists take this as one more reason why the Socialists are traitors to the left. However, the moderate and center-right parties approve, as do the police.
+The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The Spartacists take this as one more reason why the Socialists are traitors to the left. However, the moderate and center-right parties approve, as do the police.
 
 @unban_rfb
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; rfb_strength += 50; prussian_police_loyalty -= 0.1
 
-The Communist RFB is no longer banned.
+The Spartacist RFB is no longer banned.
 
 @negotiate_concordat
 view-if: prussian_concordat_progress < 1
