@@ -51,18 +51,18 @@ on-arrival: resources -= 3; coalition_dissent -= 1;
 By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
 
 @support_uspd
-choose-if: (in_grand_coalition and communist_coalition >= 3 and uspd_relation >= 50 and uspd_r >= dvp_r) or (in_weimar_coalition and uspd_relation >= 50 and uspd_r >= z_r and communist_coalition >= 3)
+choose-if: (in_grand_coalition and spartacist_coalition >= 3 and uspd_relation >= 50 and uspd_r >= dvp_r) or (in_weimar_coalition and uspd_relation >= 50 and uspd_r >= z_r and spartacist_coalition >= 3)
 view-if: tried_supporting_uspd = 0
 on-arrival: tried_supporting_uspd = 1
-unavailable-subtitle: [? if communist_coalition < 3 : The USPD won't take part in parliamentary government. ?] [? if uspd_relation < 50 : The USPD is not friendly enough with us. ?] [? if (in_grand_coalition and uspd_r < dvp_r) or (in_weimar_coalition and uspd_r < z_r): The USPD does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the USPD. ?]
+unavailable-subtitle: [? if spartacist_coalition < 3 : The USPD won't take part in parliamentary government. ?] [? if uspd_relation < 50 : The USPD is not friendly enough with us. ?] [? if (in_grand_coalition and uspd_r < dvp_r) or (in_weimar_coalition and uspd_r < z_r): The USPD does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the USPD. ?]
 
-If the Communists abstain, then we essentially can maintain a minority government[? if president=="Hindenburg":, although it would be very difficult to make policy without the support of President Hindenburg, which we do not have ?]. If this happens, then we will own a massive debt to the USPD. This could lead to broader cooperation in the future, for better or for worse.
+If the Spartacists abstain, then we essentially can maintain a minority government[? if president=="Hindenburg":, although it would be very difficult to make policy without the support of President Hindenburg, which we do not have ?]. If this happens, then we will own a massive debt to the USPD. This could lead to broader cooperation in the future, for better or for worse.
 
 - @support_uspd_2: Persuade the USPD to "tolerate" us?
 - @let_it_happen: Never mind. Let the vote happen.
 
 @support_uspd_2
-on-arrival: communist_coalition += 1; workers_uspd += 3; uspd_relation += 5
+on-arrival: spartacist_coalition += 1; workers_uspd += 3; uspd_relation += 5
 go-to: support_uspd_weimar if in_weimar_coalition; support_uspd_grand if in_grand_coalition
 
 # TODO: this can form an infinite loop
