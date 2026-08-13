@@ -14,7 +14,7 @@ The SPD cannot govern by itself yet. Because we do not have an electoral majorit
 
 - @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
 - @center: Strengthen our bonds with the Catholic Center Party.
-- @uspd: Work towards repairing relationships with the Communist Party.
+- @uspd: Work towards repairing relationships with the left-wing splinter Independent Social Democratic Party.
 - @spd_alone: The SPD can stand alone for now.
 - @easy_discard
 
@@ -29,28 +29,7 @@ go-to: uspd_blutmai if blutmai = 1; uspd_1 if blutmai = 0 and uspd_coalition_suc
 @uspd_1
 on-arrival: uspd_relation += 6*(1 - dissent); communist_coalition += 1 if uspd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; dvp_relation -= 3
 
-The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
-
-@uspd_rectification_of_history
-
-One stumbling block for our relations with the USPD is our history of conflict, dating back to 1918 and 1919. The USPD is especially contemptuous of Gustav Noske, the SPD "bloodhound" who reportedly ordered the violent suppression of the Spartacist uprising and other USPD revolts. They also blame us for the deaths of Rosa Luxemburg and Karl Liebknecht, two SPD-turned-USPD leaders who were killed during the suppression of the uprising.
-
-For further improvements in USPD relations, it might be necessary to expel Noske, and hold some sort of commemoration for Luxemburg and Liebknecht.
-
-- @yes_history: Yes, we must apologize for our past actions.
-- @no_history: No, we have no need to apologize.
-
-@yes_history
-on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; uspd_rectified_history = 1; z_relation -= 6; dvp_relation -= 6; ddp_relation -= 4; uspd_relation += 8*(1-dissent); coalition_dissent += 1
-
-As part of normalizing relations with the USPD, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
-
-This leads to tensions with the moderates and reformists within our party, and criticism from the conservative and liberal parties.
-
-@no_history
-on-arrival: uspd_relation -= 3
-
-We have no need to apologize for the actions of Ebert and Noske; it is the Communists' fault for launching a violent insurrection.
+The USPD accept our overtures, though the Communist faction are wary and persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
 
 
 @uspd_2
