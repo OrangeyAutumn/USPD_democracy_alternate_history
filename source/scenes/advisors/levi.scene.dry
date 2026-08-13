@@ -7,10 +7,10 @@ new-page: true
 
 = Paul Levi
 
-Levi is a former leader of the USPD who left over their devotion to violence and revolutionary adventurism.
+Levi is a former leader of the NSPD who resigned in protest over the election of the Communist Ernst Thälmann as Deputy Chairman.
 
 - @building_the_left
-- @uspd_cooperation
+- @nspd_cooperation
 - @root: Return to main
 
 @building_the_left
@@ -22,11 +22,11 @@ on-arrival: advisor_action_timer = 6; left_strength += 10; left_dissent -= 8; re
 
 We have increased the strength of the left faction with the SPD. This raised concern among the moderate reformists in the party.
 
-@uspd_cooperation
-title: Cooperation with the USPD
-subtitle: Any cooperation between the parties requires compromise from the USPD as well as the SPD.
+@nspd_cooperation
+title: Cooperation with the NSPD
+subtitle: Any cooperation between the parties requires compromise from the NSPD as well as the SPD.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 5; uspd_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if uspd_cooperation_seen <= 1; uspd_cooperation_seen += 1
+on-arrival: advisor_action_timer = 6; left_strength += 5; nspd_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if nspd_cooperation_seen <= 1; nspd_cooperation_seen += 1
 
-Levi attempts to reach out to his former colleagues in the USPD. Some concessions are extracted.
+Levi attempts to reach out to his former colleagues in the NSPD. Some concessions are extracted.
