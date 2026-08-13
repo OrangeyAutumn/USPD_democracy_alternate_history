@@ -48,4 +48,7 @@ Our efforts are at least somewhat successful; we have changed the recruiting and
 The center-right parties are committed to the military and deeply suspicious of our efforts to reform it.
 
 @recruitment_campaign
-subtitle: -1 resources
+subtitle: -2 resources
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources.
+on-arrival: reichswehr_loyalty += 0.15; reichswehr_militancy -= 0.5 if reichswehr_loyalty < 0.5; resources -= 2; coup_progress += 1; pacifism -= 1; democratization += 1;
