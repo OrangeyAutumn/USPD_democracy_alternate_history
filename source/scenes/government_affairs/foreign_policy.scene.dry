@@ -49,7 +49,7 @@ subtitle: We could also broach the question of the USPD...
 
 The Soviet Union also suffered from the international order created by the Treaty of Versailles; they have been participating in our secret rearmament program. The Treaty of Rapallo in 1922 affirmed our friendly relations.
 
-The Soviets are asking for economic and developmental assistance. They are still a poor country on the whole, and are desperately trying to catch up to the western powers. There is a chance that our anti-communist coalition partners would be upset, but we could assuage them by asking the Soviets for secret assistance in training and equiping the Reichswehr.
+The Soviets are asking for economic and developmental assistance. They are still a poor country on the whole, and are desperately trying to catch up to the western powers. There is a chance that our anti-spartacist coalition partners would be upset, but we could assuage them by asking the Soviets for secret assistance in training and equiping the Reichswehr.
 
 - @soviet_economic_aid_yes_mil: Provide aid, in exchange for Reichswehr assistance.
 - @soviet_economic_aid_yes: Provide aid, in exchange for only good relations.
@@ -69,7 +69,7 @@ on-arrival: budget -= 1; soviet_relation += 2; coalition_dissent += 1; foreign_g
 
 The Soviets are pleased that we have sent them aid, and have not asked for anything specific in exchange. Our coalition partners are less pleased.
 
-- @uspd: Ask if Moscow could help repair our relations with the USPD.
+- @uspd: Ask if Moscow could help further our relations with the USPD.
 - @wittorf: Do the Soviets know about the Wittorf Affair? Do they know that we know?
 - @root: Do not mention the USPD.
 
@@ -79,7 +79,7 @@ The Soviets are slightly upset, but they seemed to expect this answer.
 
 
 @uspd
-on-arrival: uspd_relation += 8*(1-dissent); communist_coalition += 1 if uspd_foreign_seen == 0; uspd_foreign_seen = 1
+on-arrival: uspd_relation += 8*(1-dissent); spartacist_coalition += 1 if uspd_foreign_seen == 0; uspd_foreign_seen = 1
 
 We also mention the USPD in our conversations with the Soviet ambassador. They claim that the USPD is entirely independent of the Soviet government, and that the conflict is Thälmann's doing. But, soon after our conversation we notice a slight improvement in attitudes from the USPD.
 
