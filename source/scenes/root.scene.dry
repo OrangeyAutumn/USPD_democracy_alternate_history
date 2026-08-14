@@ -102,7 +102,7 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.z_relation = 50;
-Q.uspd_relation = 50;
+Q.uspd_relation = 55;
 Q.ddp_relation = 60;
 Q.dvp_relation = 35;
 // DNVP and NSDAP are invariably hostile
@@ -110,7 +110,7 @@ Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
 
 Q.uspd_leader = "Liebknecht";
-// alternative is the Luxemburgists as party leader
+// alternative is the Thälmann as party leader
 Q.uspd_party_leader = "Liebknecht";
 Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
