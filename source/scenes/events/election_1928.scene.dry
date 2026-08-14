@@ -303,9 +303,9 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-SPD Minority with Conditional USPD Toleration = Q.spd_r + Q.uspd_r + Q.sapd_r;
+SPD Minority with Conditional USPD Toleration = [+ spd_minority_conditional_uspd_toleration +]%;
 
-SPD Minority with Unconditional USPD Toleration = Q.spd_r + Q.uspd_r + Q.sapd_r;
+SPD Minority with Unconditional USPD Toleration = [+ spd_minority_unconditional_uspd_toleration +]%;
 
 Social-Liberal Coalition = [+ social_liberal_coalition +]%
 
@@ -313,7 +313,7 @@ Social-Christian Coalition = [+ social_christian_coalition +]%
 
 Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
 
-Weimar Coalition with Conditional USPD Toleration (SPD + Z + [+ ddp_name +]): [+ weimar_coalition_conditional_usdp_toleration +]%
+Weimar Coalition with Conditional USPD Toleration (SPD + Z + [+ ddp_name +]): [+ popular_front_coalition +]%
 
 Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
 
