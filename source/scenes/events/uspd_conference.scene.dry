@@ -1,7 +1,7 @@
 title: USPD Party Conference
 subtitle: The USPD chooses their new central committee - will the Wittorf Affair have an influence on their choice?
 new-page: true
-view-if: uspd_relation >= 50 and wittorf_secret = 1 and year = 1929 and month >= 6 and month <= 8
+view-if: year = 1929 and month >= 10 and month <= 12
 max-visits: 1
 on-arrival: uspd_party_conference_seen = 1
 tags: event
