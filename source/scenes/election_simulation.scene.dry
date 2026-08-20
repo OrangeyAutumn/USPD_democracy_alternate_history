@@ -264,19 +264,26 @@ if (Q.uspd_r >= Q.spd_r && Q.uspd_r >= Q.nsdap_r) {
     Q.largest_party = 'USPD';
 }
 
-// coalitions
+Q.conditional_uspd_tolerated_spd_minority = Q.spd_r + Q.uspd_r + Q.sapd_r;
+Q.unconditional_uspd_tolerated_spd_minority = Q.spd_r + Q.uspd_r + Q.sapd_r;
+Q.social_liberal_coalition = Q.spd_r + Q.ddp_r
+Q.social_christian_coalition = Q.spd_r + Q.z_r + - 3
 Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
+Q.conditional_uspd_tolerated_weimar_coalition = Q.spd_r + Q.uspd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
 Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.uspd_r;
+Q.left_coalition = Q.spd_r + Q.uspd_r + Q.sapd_r;
 // this is an absurd concept lol
-Q.united_front_coalition = Q.spd_r + Q.uspd_r + Q.z_r + Q.ddp_r - 3;
-Q.anti_democratic_coalition = Q.uspd_r + Q.nsdap_r;
+Q.popular_front_coalition = Q.spd_r + Q.uspd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
+Q.anti_democratic_coalition = Q.uspd_r + Q.nsdap_r + Q.dnvp_r;
 // aka everyone except nazi, uspd, dnvp
 Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
+// Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
+Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
+Q.progressive_coalition = Q.spd_r + Q.uspd_r + Q.ddp_r + Q.sapd_r;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
@@ -309,11 +316,20 @@ Other: [+ other_r +]
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
+SPD Minority with Conditional USPD Toleration = [+ conditional_uspd_tolerated_spd_minority +]%;
 
-Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
+SPD Minority with Unconditional USPD Toleration = [+ unconditional_uspd_tolerated_spd_minority +]%;
 
-Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
+Social-Liberal Coalition = [+ social_liberal_coalition +]%
 
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
+Social-Christian Coalition = [+ social_christian_coalition +]%
 
+Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
+
+Weimar Coalition with Conditional USPD Toleration (SPD + Z + [+ ddp_name +]): [+ conditional_uspd_tolerated_weimar_coalition +]%
+
+Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+
+Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
+
+Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
