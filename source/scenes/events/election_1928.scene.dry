@@ -348,6 +348,7 @@ There are some potential coalition arrangements.
 # TODO: black-brown coalition
 
 @weimar_coalition_conditional_uspd_toleration
+count-visits-max: 99
 title: A new Weimar Coalition, tolerated by the USDP?
 subtitle: SPD + Z + [+ ddp_name +]  [? if sapd_formed: + SAPD ?]([+ @weimar_coalition_conditional_uspd_toleration +]%)
 unavailable-subtitle: SPD + USPD + Z + [+ ddp_name +] [? if sapd_formed: + SAPD ?]([+ @weimar_coalition_conditional_uspd_toleration +]%) - [? if ((uspd_relation < 45 and uspd_party_leader == "Liebknecht")): We do not have good enough relations with the USPD. ?][? if (z_relation < 45): We do not have good enough relations with the Center Party. ?]
