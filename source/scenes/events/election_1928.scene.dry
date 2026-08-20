@@ -334,7 +334,7 @@ There are some potential coalition arrangements.
 - @spd_minority_unconditional_uspd_toleration
 - @social_liberal_coalition
 - @social_christian_coalition
-- @weimar_coalition_uspd_conditional_toleration
+- @weimar_coalition_conditional_uspd_toleration
 - @grand_coalition
 - @new_grand_coalition
 - @unity_government
@@ -347,12 +347,11 @@ There are some potential coalition arrangements.
 
 # TODO: black-brown coalition
 
-@weimar_coalition_uspd_conditional_toleration
-count-visits-max: 10
+@weimar_coalition_conditional_uspd_toleration
 title: A new Weimar Coalition, tolerated by the USDP?
-subtitle: SPD + Z + [+ ddp_name +]  [? if sapd_formed: + SAPD ?]([+ @weimar_coalition_uspd_conditional_toleration +]%)
-unavailable-subtitle: SPD + USPD + Z + [+ ddp_name +] [? if sapd_formed: + SAPD ?]([+ @weimar_coalition_uspd_conditional_toleration +]%) - [? if ((uspd_relation < 45 and uspd_party_leader == "Liebknecht")): We do not have good enough relations with the USPD. ?][? if (z_relation < 45): We do not have good enough relations with the Center Party. ?]
-view-if: @weimar_coalition_uspd_conditional_toleration >= 50
+subtitle: SPD + Z + [+ ddp_name +]  [? if sapd_formed: + SAPD ?]([+ @weimar_coalition_conditional_uspd_toleration +]%)
+unavailable-subtitle: SPD + USPD + Z + [+ ddp_name +] [? if sapd_formed: + SAPD ?]([+ @weimar_coalition_conditional_uspd_toleration +]%) - [? if ((uspd_relation < 45 and uspd_party_leader == "Liebknecht")): We do not have good enough relations with the USPD. ?][? if (z_relation < 45): We do not have good enough relations with the Center Party. ?]
+view-if: @weimar_coalition_conditional_uspd_toleration >= 50
 choose-if: (uspd_relation >= 45) and (z_relation >= 45)
 on-arrival: spd_in_government = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; uspd_relation += 10; coup_progress += 1; in_left_front = 0; in_weimar_coalition = 1; in_grand_coalition = 0; coalition_dissent = 0; uspd_goals_seen = 0; finance_minister_party = "Z"; interior_minister_party = "Z"; economic_minister_party = "Z"; labor_minister_party = "Z"; foreign_minister_party = "Z"; agriculture_minister_party = "Z"; reichswehr_minister = "I"; leverage = spd_r + uspd_r;
 
